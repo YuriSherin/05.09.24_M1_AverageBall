@@ -35,3 +35,15 @@ dict_average_ball[students[index]] = average_ball
 
 print(dict_average_ball)    # Вывод словаря в консоль
 
+print('-' * 70)
+
+# =====================================================================
+# С использованием циклов задача упрощается
+dict_average_ball = {}          # создадим словарь
+index = 0                       # вспомогательная переменная
+
+for name_student in students:   # перебор всех элементов списка
+    dict_average_ball[name_student] = sum(grades[index]) / len(grades[index])
+    index += 1
+
+print(dict_average_ball)        # вывод в консоль
